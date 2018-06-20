@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.minimart.portlet.danhmucchung">
+	<author>Mai Thành Duy An</author>
+    <namespace>MiniMart</namespace>
+	
+	<entity name="TinhThanhPho" local-service="true" remote-service="true" table="minimart_tinhthanhpho">
+
+		<!-- PK fields -->
+
+		<column name="tinhThanhPhoId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="ma" type="String" />
+		<column name="trangThai" type="boolean" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN" return-type="TinhThanhPho" unique="true">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="MA" return-type="TinhThanhPho" unique="true">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="TEN_MA_TT" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="ma" />
+			<finder-column name="trangThai" />
+		</finder>
+	</entity>
+	
+	<entity name="QuanHuyen" local-service="true" remote-service="true" table="minimart_quanhuyen">
+
+		<!-- PK fields -->
+
+		<column name="quanHuyenId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="ma" type="String" />
+		<column name="trangThai" type="boolean" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN" return-type="QuanHuyen" unique="true">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="MA" return-type="QuanHuyen" unique="true">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="TEN_MA_TT" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="ma" />
+			<finder-column name="trangThai" />
+		</finder>
+	</entity>
+	
+	
+	<entity name="PhuongXa" local-service="true" remote-service="true" table="minimart_phuongxa">
+
+		<!-- PK fields -->
+
+		<column name="phuongXaId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="ma" type="String" />
+		<column name="trangThai" type="boolean" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN" return-type="PhuongXa" unique="true">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="MA" return-type="PhuongXa" unique="true">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="TEN_MA_TT" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="ma" />
+			<finder-column name="trangThai" />
+		</finder>
+	</entity>
+	
+	
+	<entity name="Duong" local-service="true" remote-service="true" table="minimart_Duong">
+
+		<!-- PK fields -->
+
+		<column name="duongId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="ma" type="String" />
+		<column name="trangThai" type="boolean" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN" return-type="Duong" unique="true">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="MA" return-type="Duong" unique="true">
+			<finder-column name="ma" />
+		</finder>
+		<finder name="TEN_MA_TT" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="ma" />
+			<finder-column name="trangThai" />
+		</finder>
+	</entity>
+	
+	<exceptions>
+		<exception>TrungTenThanhPho</exception>
+	</exceptions>
+</service-builder>

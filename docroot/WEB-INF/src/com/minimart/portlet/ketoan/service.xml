@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.minimart.portlet.ketoan">
+	<author>Mai Thành Duy An</author>
+    <namespace>MiniMart</namespace>
+	
+	<entity name="ThuChi" local-service="true" remote-service="true" table="minimart_thuchi">
+
+		<!-- PK fields -->
+
+		<column name="thuChiId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="tenDoiTuong" type="String" />
+		<column name="diaChiId" type="long" />
+		<column name="loai" type="int" />
+		<column name="loaiDoiTuong" type="int" />
+		<column name="thu" type="int" />
+		<column name="chi" type="int" />
+		<column name="nhaCungCapId" type="long" />
+		<column name="khachHangId" type="long" />
+		<column name="nhanVienId" type="long" />
+		<column name="theTraTruocId" type="long" />
+		<column name="taiKhoanNganHangId" type="long" />
+		<column name="datHangId" type="long" />
+		<column name="bangLuongId" type="long" />
+		<column name="lyDoThuChi" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+			<order-column name="tenDoiTuong" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="LYDO" return-type="Collection">
+			<finder-column name="lyDoThuChi" />
+		</finder>
+		<finder name="NVID" return-type="Collection">
+			<finder-column name="nhanVienId" />
+		</finder>
+	</entity>
+	
+	<entity name="BangLuong" local-service="true" remote-service="true" table="minimart_bangluong">
+
+		<!-- PK fields -->
+
+		<column name="banLuongId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="trangThai" type="boolean" />
+		<column name="thang" type="int" />
+		<column name="nam" type="int" />
+		<column name="ngay" type="Date" />
+		<column name="chiTiet" type="String" />
+		<column name="ghiChu" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN_TT" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="trangThai" />
+		</finder>
+	</entity>
+	<exceptions>
+		<exception>ThuChi</exception>
+		<exception>TrungTen</exception>
+	</exceptions>
+</service-builder>

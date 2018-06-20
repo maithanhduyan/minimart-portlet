@@ -4,7 +4,49 @@
 	<author>Mai Thành Duy An</author>
     <namespace>MiniMart</namespace>
 		
+	<entity name="TheTraTruoc" local-service="true" remote-service="true" table="minimart_thetratruoc">
+
+		<!-- PK fields -->
+
+		<column name="theTraTruocId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="tenThe" type="String" />
+		<column name="nhomTheTraTruocId" type="long" />
+		<column name="khoa" type="boolean" />
+		<column name="ngayHetHan" type="Date" />
+		<column name="trangThai" type="String" />
+		<column name="userModifiledId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="tenThe" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="NGAYHH" return-type="Collection">
+			<finder-column name="ngayHetHan" />
+		</finder>
+		<finder name="TT" return-type="Collection">
+			<finder-column name="trangThai" />
+		</finder>
+		<finder name="NGAYHH_KHOA" return-type="Collection">
+			<finder-column name="ngayHetHan" />
+			<finder-column name="khoa" />
+		</finder>
+	</entity>	
 	<exceptions>
-		<exception>TrungMa</exception>
+		<exception>TheTraTruoc</exception>
 	</exceptions>
 </service-builder>

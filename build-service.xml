@@ -9,6 +9,21 @@
 		</antcall>
 	</target>
 	
+	<target name="build-all-service">
+		<antcall target="build-service-banhang"/>
+		<antcall target="build-service-cuahang"/>
+		<antcall target="build-service-danhmucchung"/>
+		<antcall target="build-service-dathang"/>
+		<antcall target="build-service-ketoan"/>
+		<antcall target="build-service-khachhang"/>
+		<antcall target="build-service-khohang"/>
+		<antcall target="build-service-khuyenmai"/>
+		<antcall target="build-service-mathang"/>
+		<antcall target="build-service-nhacungcap"/>
+		<antcall target="build-service-nhanvien"/>
+		<antcall target="build-service-thethanhtoan"/>
+	</target>
+	
 	<target name="build-service-banhang">
 		<antcall target="build-service">
 			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/banhang/service.xml"/>
@@ -60,6 +75,18 @@
 	<target name="build-service-thethanhtoan">
 		<antcall target="build-service">
 			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/thethanhtoan/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-ketoan">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/ketoan/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-danhmucchung">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/danhmucchung/service.xml"/>
 		</antcall>
 	</target>
 	

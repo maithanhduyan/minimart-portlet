@@ -11,6 +11,19 @@
 		<antcall target="clean-meta-inf" />
 		<antcall target="clean-classes" />
 		<antcall target="clean-meta-inf" />
+		<antcall target="delete-service.properties-file" />
+		<antcall target="clean-service-banhang" />
+		<antcall target="clean-service-mathang" />
+		<antcall target="clean-service-dathang" />
+		<antcall target="clean-service-khachhang" />
+		<antcall target="clean-service-khohang" />
+		<antcall target="clean-service-khuyenmai" />
+		<antcall target="clean-service-cuahang" />
+		<antcall target="clean-service-nhanvien" />
+		<antcall target="clean-service-ketoan" />
+		<antcall target="clean-service-thethanhtoan" />
+		<antcall target="clean-service-nhacungcap" />
+		<antcall target="clean-service-danhmucchung" />
 	</target>
 
 	<target name="clean-sql">
@@ -67,6 +80,42 @@
 		<delete dir="${service.dir}/com/minimart/portlet/khuyenmai"/>
 		<delete dir="${minimart.dir}/portlet/khuyenmai/model"/>
 		<delete dir="${minimart.dir}/portlet/khuyenmai/service"/>
+	</target>
+	
+	<target name="clean-service-cuahang">
+		<delete dir="${service.dir}/com/minimart/portlet/cuahang"/>
+		<delete dir="${minimart.dir}/portlet/cuahang/model"/>
+		<delete dir="${minimart.dir}/portlet/cuahang/service"/>
+	</target>
+	
+	<target name="clean-service-nhanvien">
+		<delete dir="${service.dir}/com/minimart/portlet/nhanvien"/>
+		<delete dir="${minimart.dir}/portlet/nhanvien/model"/>
+		<delete dir="${minimart.dir}/portlet/nhanvien/service"/>
+	</target>
+	
+	<target name="clean-service-ketoan">
+		<delete dir="${service.dir}/com/minimart/portlet/ketoan"/>
+		<delete dir="${minimart.dir}/portlet/ketoan/model"/>
+		<delete dir="${minimart.dir}/portlet/ketoan/service"/>
+	</target>
+	
+	<target name="clean-service-thethanhtoan">
+		<delete dir="${service.dir}/com/minimart/portlet/thethanhtoan"/>
+		<delete dir="${minimart.dir}/portlet/thethanhtoan/model"/>
+		<delete dir="${minimart.dir}/portlet/thethanhtoan/service"/>
+	</target>
+	
+	<target name="clean-service-nhacungcap">
+		<delete dir="${service.dir}/com/minimart/portlet/nhacungcap"/>
+		<delete dir="${minimart.dir}/portlet/nhacungcap/model"/>
+		<delete dir="${minimart.dir}/portlet/nhacungcap/service"/>
+	</target>
+	
+	<target name="clean-service-danhmucchung">
+		<delete dir="${service.dir}/com/minimart/portlet/danhmucchung"/>
+		<delete dir="${minimart.dir}/portlet/danhmucchung/model"/>
+		<delete dir="${minimart.dir}/portlet/danhmucchung/service"/>
 	</target>
 	
 </project>

@@ -4,7 +4,59 @@
 	<author>Mai Thành Duy An</author>
     <namespace>MiniMart</namespace>
 		
+	<entity name="NhanVien" local-service="true" remote-service="true" table="minimart_nhanvien" uuid="true" uuid-accessor="true">
+
+		<!-- PK fields -->
+
+		<column name="nhanVienId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="ho" type="String" />
+		<column name="trangThai" type="boolean" />
+		<column name="nghiThu7" type="boolean" />
+		<column name="nghiChuNhat" type="boolean" />
+		<column name="cachTinhLuong" type="int" />
+		<column name="luongCa" type="int" />
+		<column name="luongThang" type="int" />
+		<column name="image" type="String" />
+		<column name="diaChiId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN_HO" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="ho" />
+		</finder>
+		<finder name="TEN_HO_TH" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="ho" />
+			<finder-column name="trangThai" />
+		</finder>
+		<finder name="NGHIT7" return-type="Collection">
+			<finder-column name="nghiThu7" />
+		</finder>
+		<finder name="NGHIT7_CN" return-type="Collection">
+			<finder-column name="nghiThu7" />
+			<finder-column name="nghiChuNhat" />
+		</finder>
+	</entity>
 	<exceptions>
-		<exception>TrungMa</exception>
+		<exception>NhanVien</exception>
 	</exceptions>
 </service-builder>
