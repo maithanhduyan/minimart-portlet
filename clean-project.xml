@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="clean-project" basedir="." default="clean-all">
+	<property file="project.properties" />
+
+	<target name="clean-all">
+		<echo>clean all</echo>
+		<antcall target="clean-sql" />
+		<antcall target="clean-service" />
+		<antcall target="clean-meta-inf" />
+		<antcall target="clean-classes" />
+		<antcall target="clean-meta-inf" />
+	</target>
+
+	<target name="clean-sql">
+		<delete dir="${sql.dir}" />
+	</target>
+
+	<target name="clean-service">
+		<delete dir="${service.dir}" />
+	</target>
+
+	<target name="clean-classes">
+		<delete dir="${classes.dir}" />
+	</target>
+
+	<target name="clean-meta-inf">
+		<delete dir="${metainf.dir}" />
+	</target>
+	
+	<target name="delete-service.properties-file">
+		<delete file="${service.properties.file}"/>
+	</target>
+	
+	<target name="clean-service-banhang">
+		<delete dir="${service.dir}/com/minimart/portlet/banhang"/>
+		<delete dir="${minimart.dir}/portlet/banhang/model"/>
+		<delete dir="${minimart.dir}/portlet/banhang/service"/>
+	</target>
+	
+	<target name="clean-service-mathang">
+		<delete dir="${service.dir}/com/minimart/portlet/mathang"/>
+		<delete dir="${minimart.dir}/portlet/mathang/model"/>
+		<delete dir="${minimart.dir}/portlet/mathang/service"/>
+	</target>
+	
+	<target name="clean-service-dathang">
+		<delete dir="${service.dir}/com/minimart/portlet/dathang"/>
+		<delete dir="${minimart.dir}/portlet/dathang/model"/>
+		<delete dir="${minimart.dir}/portlet/dathang/service"/>
+	</target>
+	
+	<target name="clean-service-khachhang">
+		<delete dir="${service.dir}/com/minimart/portlet/khachhang"/>
+		<delete dir="${minimart.dir}/portlet/khachhang/model"/>
+		<delete dir="${minimart.dir}/portlet/khachhang/service"/>
+	</target>
+	
+	<target name="clean-service-khohang">
+		<delete dir="${service.dir}/com/minimart/portlet/khohang"/>
+		<delete dir="${minimart.dir}/portlet/khohang/model"/>
+		<delete dir="${minimart.dir}/portlet/khohang/service"/>
+	</target>
+	
+	<target name="clean-service-khuyenmai">
+		<delete dir="${service.dir}/com/minimart/portlet/khuyenmai"/>
+		<delete dir="${minimart.dir}/portlet/khuyenmai/model"/>
+		<delete dir="${minimart.dir}/portlet/khuyenmai/service"/>
+	</target>
+	
+</project>

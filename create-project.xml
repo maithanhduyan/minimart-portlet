@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="create-project" basedir="."
+	default="create-structure-project-folder">
+	<property file="project.properties"/>
+	
+	<property name="" value=""/>
+	
+	<target name="create-structure-project-folder">
+		<mkdir dir=""/>
+	</target>
+	
+	<target name="create-content">
+		<mkdir dir="${content.dir}" />
+	</target>
+</project>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.minimart.portlet.khachhang">
+	<author>Mai Thành Duy An</author>
+    <namespace>MiniMart</namespace>
+	
+	<entity name="KhachHang" local-service="true" remote-service="true" table="minimart_khachhang">
+
+		<!-- PK fields -->
+		<column name="khachHangId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="ten" type="String" />
+		<column name="nhomKhachHangId" type="long" />
+		<column name="ma" type="String" />
+		<column name="diaChi" type="String" />
+		<column name="dienThoai" type="String" />
+		<column name="email" type="String" />
+		<column name="facebook" type="String" />
+		<column name="twitter" type="String" />
+		<column name="socialMedia1" type="String" />
+		<column name="socialMedia2" type="String" />
+		<column name="socialMedia3" type="String" />
+		<column name="trangThai" type="int" />
+		<column name="diemTichLuy" type="int" />
+		<column name="maSoThue" type="String" />
+		<column name="hoatDong" type="boolean" />
+		<column name="ngaySinh" type="Date" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="TEN_MA" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="ma" />
+		</finder>
+		<finder name="TEN_MA_NHOM_HD" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="ma" />
+			<finder-column name="nhomKhachHangId" />
+			<finder-column name="hoatDong" />
+		</finder>
+	</entity>
+
+	<entity name="NhomKhachHang" local-service="true" remote-service="true" table="minimart_nhomkhachhang">
+
+		<!-- PK fields -->
+		<column name="nhomKhachHangId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="ten" type="String" />
+		<column name="hoatDong" type="boolean" />
+		<column name="diemTichLuy" type="int" />
+		<column name="tiLeGiamGia" type="int" />
+		<column name="uuTien" type="int" />
+		<column name="image" type="String" />
+
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="TEN_HD" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="hoatDong" />
+		</finder>
+	</entity>
+		
+	<exceptions>
+		<exception>TrungTen</exception>
+		<exception>TrungMa</exception>
+		<exception>DiemTichLuy</exception>
+	</exceptions>
+</service-builder>

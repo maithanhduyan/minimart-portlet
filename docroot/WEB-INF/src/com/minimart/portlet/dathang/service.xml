@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.minimart.portlet.dathang">
+	<author>Mai Thành Duy An</author>
+	<namespace>MiniMart</namespace>
+	
+	<entity name="DatHang" local-service="true" remote-service="true"
+		table="minimart_dathang">
+		
+		<!-- PK fields -->
+		<column name="datHangId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="ten" type="String" />
+		<column name="khachHangId" type="long" />
+		<column name="diaChiId" type="long" />
+		<column name="tienHang" type="int" />
+		<column name="tiLeThue" type="double" />
+		<column name="tiLeGiamGia" type="double" />
+		<column name="tienGiamGia" type="int" />
+		<column name="phiVanChuyen" type="int" />
+		<column name="tongCong" type="int" />
+		<column name="loai" type="int" />
+		<column name="giamTheoTien" type="int" />
+		<column name="trangThai" type="boolean" />
+		<column name="userModifiedId" type="long" />
+		<column name="timeModified" type="Date" />
+		<column name="userCreateId" type="long" />
+		<column name="loaiGia" type="int" />
+		<column name="hoatDong" type="boolean" />
+		<!-- Order -->
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="TEN_HD" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="hoatDong" />
+		</finder>
+		<finder name="TEN_HD_KHID" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="hoatDong" />
+			<finder-column name="khachHangId" />
+		</finder>
+	</entity>
+
+	 <entity name="DatHangChiTiet" local-service="true" remote-service="true" table="minimart_dathangchitiet">
+
+		<!-- PK fields -->
+
+		<column name="datHangChiTietId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="soLuong" type="int" />
+		<column name="donGia" type="int" />
+		<column name="thanhTien" type="int" />
+		<column name="tiLeGiamGia" type="double" />
+		<column name="ghiChu" type="String" />
+		<column name="trangThai" type="boolean" />
+		<column name="baoHanh" type="String" />
+		<column name="donViTinhId" type="long" />
+		<column name="datHangId" type="long" />
+		<column name="maHangId" type="long" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="DHID_MHID" return-type="Collection">
+			<finder-column name="datHangId" />
+			<finder-column name="maHangId" />
+		</finder>
+	</entity>
+		<exceptions>
+		<exception>TrungTen</exception>
+		<exception>SoLuong</exception>
+		<exception>BaoHanh</exception>
+		<exception>LoaiGia</exception>
+	</exceptions>
+</service-builder>

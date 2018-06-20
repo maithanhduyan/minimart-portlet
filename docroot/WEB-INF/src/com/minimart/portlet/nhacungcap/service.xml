@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.minimart.portlet.nhacungcap">
+	<author>Mai Thành Duy An</author>
+    <namespace>MiniMart</namespace>
+	
+	<entity name="NhaCungCap" local-service="true" remote-service="true" table="minimart_nhacungcap">
+
+		<!-- PK fields -->
+		<column name="nhaCungCapId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="tenNhaCungCap" type="String" />
+		<column name="nhomNhaCungCapId" type="long" />
+		<column name="maNhaCungCap" type="String" />
+		<column name="diaChi" type="String" />
+		<column name="dienThoai" type="String" />
+		<column name="email" type="String" />
+		<column name="website" type="String" />
+		<column name="ghiChu" type="String" />
+		<column name="hoatDong" type="boolean" />
+		<column name="doUuTien" type="int" />
+		<column name="logoURL" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="tenNhaCungCap" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN_MA" return-type="Collection">
+			<finder-column name="tenNhaCungCap" />
+			<finder-column name="maNhaCungCap" />
+		</finder>
+		<finder name="TEN_MA_NHOM" return-type="Collection">
+			<finder-column name="tenNhaCungCap" />
+			<finder-column name="maNhaCungCap" />
+			<finder-column name="nhomNhaCungCapId" />
+		</finder>
+		<finder name="TEN_MA_NHOM_HD" return-type="Collection">
+			<finder-column name="tenNhaCungCap" />
+			<finder-column name="maNhaCungCap" />
+			<finder-column name="nhomNhaCungCapId" />
+			<finder-column name="hoatDong" />
+		</finder>
+	</entity>
+	
+	<entity name="NhomNhaCungCap" local-service="true" remote-service="true" table="minimart_nhomnhacungcap">
+
+		<!-- PK fields -->
+		<column name="nhomNhaCungCapId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="ten" type="String" />
+		<column name="ghiChu" type="String" />
+		<column name="hoatDong" type="boolean" />
+		<column name="uuTien" type="int" />
+		<column name="image" type="String" />
+
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="TEN" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+		<finder name="TEN_HD" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="hoatDong" />
+		</finder>
+	</entity>
+	
+	<exceptions>
+		<exception>TrungMa</exception>
+	</exceptions>
+</service-builder>

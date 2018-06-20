@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE project>
+
+<project name="minimart-build-service" basedir="." default="deploy">
+	<import file="../build-common-portlet.xml" />
+	<target name="build-service-mathang">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/mathang/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-banhang">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/banhang/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-dathang">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/dathang/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-khohang">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/khohang/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-cuahang">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/cuahang/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-khachhang">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/khachhang/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-khuyenmai">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/khuyenmai/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-nhacungcap">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/nhacungcap/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-nhanvien">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/nhanvien/service.xml"/>
+		</antcall>
+	</target>
+	
+	<target name="build-service-thethanhtoan">
+		<antcall target="build-service">
+			<param name="service.input.file" value="docroot/WEB-INF/src/com/minimart/portlet/thethanhtoan/service.xml"/>
+		</antcall>
+	</target>
+	
+</project>

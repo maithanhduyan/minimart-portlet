@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.minimart.portlet.mathang">
+	<author>Mai Thành Duy An</author>
+	<namespace>MiniMart</namespace>
+
+	<entity name="MatHang" local-service="true" remote-service="true" uuid="true" cache-enabled="true"  table="minimart_mathang">
+		<!-- PK fields -->
+		<column name="matHangId" type="long" primary="true" />
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="code" type="String" />
+		<column name="giaNhap" type="int" />
+		<column name="status" type="int" />
+		<column name="giaBan" type="int" />
+		<column name="giaBan1" type="int" />
+		<column name="giaBan2" type="int" />
+		<column name="giaBan3" type="int" />
+		<column name="tonToiThieu" type="int" />
+		<column name="tonToiDa" type="int" />
+		<column name="giaVon" type="int" />
+		<column name="hoaHong" type="int" />
+		<column name="nhomMatHangId" type="long" />
+		<column name="donViTinhId" type="long" />
+		<column name="size" type="String" />
+		<column name="imageUrl" type="String" />
+		<column name="hoatDong" type="boolean" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+		<!-- Finder methods -->
+		<finder name="Name" return-type="Collection">
+			<finder-column name="name" />
+		</finder>
+		<finder name="C_U" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="userId" />
+		</finder>
+		<finder name="C_S" return-type="Collection">
+			<finder-column name="companyId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="BCODE_HD" return-type="MatHang" unique="true">
+			<finder-column name="code" />
+			<finder-column name="hoatDong" />
+		</finder>
+	</entity>
+	
+	<entity name="NhomMatHang" local-service="true" remote-service="true" table="minimart_nhommathang">
+		<!-- PK fields -->
+		<column name="nhomMatHangId" type="long" primary="true" />
+		
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="code" type="String" />
+		<column name="status" type="int" />
+		<column name="note" type="String" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+		<!-- Finder methods -->
+		<finder name="Name" return-type="Collection">
+			<finder-column name="name" />
+		</finder>
+	</entity>
+
+	<entity name="DonViTinh" local-service="true" remote-service="true" table="minimart_donvitinh">
+		<!-- PK fields -->
+		<column name="donViTinhId" type="long" primary="true" />
+		
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+		
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Other fields -->
+		<column name="name" type="String" />
+		<column name="status" type="int" />
+		<column name="note" type="String" />
+		
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="name" />
+		</order>
+		<!-- Finder methods -->
+		<finder name="Name" return-type="Collection">
+			<finder-column name="name" />
+		</finder>
+	</entity>
+	<exceptions>
+		<exception>TrungMa</exception>
+	</exceptions>
+	 
+</service-builder>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.minimart.portlet.khohang">
+	<author>Mai Thành Duy An</author>
+    <namespace>MiniMart</namespace>
+	
+	<entity name="KhoHang" local-service="true" remote-service="true" table="minimart_khohang">
+
+		<!-- PK fields -->
+
+		<column name="khoHangId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="trangThai" type="boolean" />
+		<column name="itemType" type="int" />
+		<column name="choPhepNhapKho" type="boolean" />
+		<column name="cuaHangId" type="long" />
+		<column name="autoId" type="long" />
+		<column name="sigmaId" type="long" />
+		<column name="ghiChu" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="Ten" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+	</entity>
+	
+	<exceptions>
+		<exception>ItemType</exception>
+	</exceptions>
+</service-builder>

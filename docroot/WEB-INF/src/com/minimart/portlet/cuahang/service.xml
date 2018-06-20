@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.minimart.portlet.cuahang">
+	<author>Mai Thành Duy An</author>
+    <namespace>MiniMart</namespace>
+	<entity name="CuaHang" local-service="true" remote-service="true" table="minimart_cuahang" uuid="true" uuid-accessor="true">
+
+		<!-- PK fields -->
+		<column name="cuaHangId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="ten" type="String" />
+		<column name="gioMoCua" type="Date" />
+		<column name="gioDongCua" type="Date" />
+		<column name="hoatDong" type="boolean" />
+		<column name="uuTien" type="int" />
+		<column name="diaChi" type="String" />
+		<column name="dienThoai" type="String" />
+		<column name="khoHangId" type="long" />
+
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="TEN_HD" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="hoatDong" />
+		</finder>
+	</entity>
+	
+	<entity name="CaLamViec" local-service="true" remote-service="true" table="minimart_calamviec">
+
+		<!-- PK fields -->
+		<column name="caLamViecId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="ten" type="String" />
+		<column name="cuaHangId" type="long" />
+		<column name="gioVaoLam" type="Date" />
+		<column name="gioRaVe" type="Date" />
+		<column name="gioNghiGiuaCaTu" type="Date" />
+		<column name="gioNghiGiuaCaDen" type="Date" />
+		<column name="tiLeLuong" type="int" />
+		<column name="hoatDong" type="boolean" />
+
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="TEN_HD" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="hoatDong" />
+		</finder>
+	</entity>
+	
+	<entity name="TangCa" local-service="true" remote-service="true" table="minimart_tangca">
+
+		<!-- PK fields -->
+		<column name="tangCaId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="ten" type="String" />
+		<column name="cuaHangId" type="long" />
+		<column name="caLamViecId" type="long" />
+		<column name="nhanVienId" type="long" />
+		<column name="tangCaTu" type="Date" />
+		<column name="tangCaDen" type="Date" />
+		<column name="hoatDong" type="boolean" />
+
+		<!-- Order -->
+		<order by="asc">
+			<order-column name="ten" />
+		</order>
+
+		<!-- Finder methods -->
+		<finder name="UID_CH_CLV_HD" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="cuaHangId" />
+			<finder-column name="caLamViecId" />
+			<finder-column name="hoatDong" />
+		</finder>
+	</entity>
+	
+	<exceptions>
+		<exception>TrungTen</exception>
+		<exception>GioVaoLam</exception>
+		<exception>GioMoCua</exception>
+		<exception>GioDongCua</exception>
+		<exception>TangCa</exception>
+	</exceptions>
+</service-builder>

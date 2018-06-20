@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<custom-sql>
+	<sql file="custom-sql/mathang.xml" />
+	<sql file="custom-sql/khachhang.xml" />
+	<sql file="custom-sql/hoadon.xml" />
+</custom-sql>

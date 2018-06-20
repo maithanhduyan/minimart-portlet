@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.minimart.portlet.khuyenmai">
+	<author>Mai Thành Duy An</author>
+    <namespace>MiniMart</namespace>
+	
+	<entity name="DotKhuyenMai" local-service="true" remote-service="true" table="minimart_dotkhuyenmai">
+
+		<!-- PK fields -->
+
+		<column name="dotKhuyenMaiId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="trangThai" type="boolean" />
+		<column name="userModifieldId" type="long" />
+		<column name="ngayBatDau" type="Date" />
+		<column name="ngayHetHan" type="Date" />
+		<column name="ngungApDung" type="boolean" />
+		<column name="tiLeGiaGia" type="int" />
+		<column name="ghiChu" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN_TH" return-type="Collection">
+			<finder-column name="ten" />
+		</finder>
+
+		<finder name="NGAY_HH" return-type="Collection">
+			<finder-column name="ngayHetHan" />
+		</finder>
+
+		<finder name="NGAY_BD" return-type="Collection">
+			<finder-column name="ngayBatDau" />
+		</finder>
+	</entity>
+	
+	<entity name="DotKhuyenMaiChiTiet" local-service="true" remote-service="true" table="minimart_dotkhuyenmaichitiet">
+
+		<!-- PK fields -->
+
+		<column name="dotKhuyenMaiChiTietId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="dotKhuyenMaiId" type="long" />
+		<column name="nhomMatHangId" type="long" />
+		<column name="matHangId" type="long" />
+		<column name="matHangTangId" type="long" />
+		<column name="tiLeGiamGia" type="double" />
+		<column name="giaTriDonHang" type="double" />
+		<column name="soLuongMua" type="int" />
+		<column name="soLuongTang" type="int" />
+		<column name="giaBan" type="int" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="DKMID_NMHID" return-type="Collection">
+			<finder-column name="dotKhuyenMaiId" />
+			<finder-column name="nhomMatHangId" />
+		</finder>
+
+		<finder name="DKMID_NMHID_MHID" return-type="Collection">
+			<finder-column name="dotKhuyenMaiId" />
+			<finder-column name="nhomMatHangId" />
+			<finder-column name="matHangId" />
+		</finder>
+	</entity>
+	
+	<entity name="LoaiHinhKhuyenMai" local-service="true" remote-service="true" table="minimart_loaihinhkhuyenmai">
+
+		<!-- PK fields -->
+
+		<column name="loaiHinhKhuyenMaiId" type="long" primary="true" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="ten" type="String" />
+		<column name="trangThai" type="boolean" />
+		<column name="tileGiamGia" type="int" />
+		<column name="ngayBatDau" type="Date" />
+		<column name="ngayHetHan" type="Date" />
+		<column name="imageid" type="String" />
+		<column name="ghiChu" type="String" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="createDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="TEN_TH" return-type="Collection">
+			<finder-column name="ten" />
+			<finder-column name="trangThai" />
+		</finder>
+	</entity>	
+	
+	<exceptions>
+		<exception>HetHanKhuyeMai</exception>
+	</exceptions>
+</service-builder>
