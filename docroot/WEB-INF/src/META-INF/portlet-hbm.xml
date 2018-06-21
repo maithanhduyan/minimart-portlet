@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.minimart.portlet.mathang.model.DonViTinh" />
+	<import class="com.minimart.portlet.mathang.model.MatHang" />
+	<import class="com.minimart.portlet.mathang.model.NhomMatHang" />
+	<class name="com.minimart.portlet.mathang.model.impl.DonViTinhImpl" table="minimart_donvitinh">
+		<cache usage="read-write" />
+		<id name="donViTinhId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="note" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.minimart.portlet.mathang.model.impl.MatHangImpl" table="minimart_mathang">
+		<cache usage="read-write" />
+		<id name="matHangId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="code" type="com.liferay.portal.dao.orm.hibernate.StringType" column="code_" />
+		<property name="giaNhap" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="giaBan" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="giaBan1" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="giaBan2" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="giaBan3" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="tonToiThieu" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="tonToiDa" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="giaVon" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="hoaHong" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="nhomMatHangId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="donViTinhId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="size" type="com.liferay.portal.dao.orm.hibernate.StringType" column="size_" />
+		<property name="imageUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hoatDong" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+	</class>
+	<class name="com.minimart.portlet.mathang.model.impl.NhomMatHangImpl" table="minimart_nhommathang">
+		<cache usage="read-write" />
+		<id name="nhomMatHangId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="code" type="com.liferay.portal.dao.orm.hibernate.StringType" column="code_" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="note" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

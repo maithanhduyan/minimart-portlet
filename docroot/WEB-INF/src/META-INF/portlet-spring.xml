@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.minimart.portlet.mathang.service.DonViTinhLocalService" class="com.minimart.portlet.mathang.service.impl.DonViTinhLocalServiceImpl" />
+	<bean id="com.minimart.portlet.mathang.service.DonViTinhService" class="com.minimart.portlet.mathang.service.impl.DonViTinhServiceImpl" />
+	<bean id="com.minimart.portlet.mathang.service.persistence.DonViTinhPersistence" class="com.minimart.portlet.mathang.service.persistence.DonViTinhPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.mathang.service.MatHangLocalService" class="com.minimart.portlet.mathang.service.impl.MatHangLocalServiceImpl" />
+	<bean id="com.minimart.portlet.mathang.service.MatHangService" class="com.minimart.portlet.mathang.service.impl.MatHangServiceImpl" />
+	<bean id="com.minimart.portlet.mathang.service.persistence.MatHangPersistence" class="com.minimart.portlet.mathang.service.persistence.MatHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.mathang.service.NhomMatHangLocalService" class="com.minimart.portlet.mathang.service.impl.NhomMatHangLocalServiceImpl" />
+	<bean id="com.minimart.portlet.mathang.service.NhomMatHangService" class="com.minimart.portlet.mathang.service.impl.NhomMatHangServiceImpl" />
+	<bean id="com.minimart.portlet.mathang.service.persistence.NhomMatHangPersistence" class="com.minimart.portlet.mathang.service.persistence.NhomMatHangPersistenceImpl" parent="basePersistence" />
+</beans>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.minimart.portlet.mathang.model.DonViTinh">
+		<field name="donViTinhId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="status" type="int" />
+		<field name="note" type="String" />
+	</model>
+	<model name="com.minimart.portlet.mathang.model.MatHang">
+		<field name="uuid" type="String" />
+		<field name="matHangId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="code" type="String" />
+		<field name="giaNhap" type="int" />
+		<field name="status" type="int" />
+		<field name="giaBan" type="int" />
+		<field name="giaBan1" type="int" />
+		<field name="giaBan2" type="int" />
+		<field name="giaBan3" type="int" />
+		<field name="tonToiThieu" type="int" />
+		<field name="tonToiDa" type="int" />
+		<field name="giaVon" type="int" />
+		<field name="hoaHong" type="int" />
+		<field name="nhomMatHangId" type="long" />
+		<field name="donViTinhId" type="long" />
+		<field name="size" type="String" />
+		<field name="imageUrl" type="String" />
+		<field name="hoatDong" type="boolean" />
+	</model>
+	<model name="com.minimart.portlet.mathang.model.NhomMatHang">
+		<field name="nhomMatHangId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="code" type="String" />
+		<field name="status" type="int" />
+		<field name="note" type="String" />
+	</model>
+</model-hints>
