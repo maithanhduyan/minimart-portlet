@@ -53,4 +53,400 @@
 		<field name="status" type="int" />
 		<field name="note" type="String" />
 	</model>
+	<model name="com.minimart.portlet.banhang.model.DonHang">
+		<field name="donHangId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="cuaHangId" type="long" />
+		<field name="khachHangId" type="long" />
+		<field name="hoatDong" type="boolean" />
+		<field name="tongCong" type="int" />
+		<field name="daThanhToan" type="boolean" />
+		<field name="phiVanChuyen" type="int" />
+		<field name="trangThaiDonHangId" type="long" />
+		<field name="ngayThanhToan" type="Date" />
+		<field name="khachDua" type="int" />
+		<field name="traLai" type="int" />
+		<field name="thueVAT" type="int" />
+		<field name="diemTichLuy" type="int" />
+		<field name="thanhToanTienMat" type="int" />
+		<field name="thanhToanThe" type="int" />
+		<field name="thanhToanChuyenKhoan" type="int" />
+		<field name="phieuGiamGiaId" type="long" />
+		<field name="truTichLuy" type="int" />
+		<field name="inHoaDonLan" type="int" />
+		<field name="maDonHang" type="String" />
+	</model>
+	<model name="com.minimart.portlet.banhang.model.DonHangChiTiet">
+		<field name="donHangChiTietId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="donHangId" type="long" />
+		<field name="matHangId" type="long" />
+		<field name="soLuong" type="int" />
+		<field name="donViTinhId" type="long" />
+		<field name="thanhTien" type="int" />
+		<field name="tiLeGiamGia" type="int" />
+		<field name="kichThuoc" type="String" />
+		<field name="hanSuDung" type="Date" />
+		<field name="hoatDong" type="boolean" />
+		<field name="huy" type="boolean" />
+	</model>
+	<model name="com.minimart.portlet.banhang.model.TrangThaiDonHang">
+		<field name="trangThaiDonHangId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="hoatDong" type="boolean" />
+		<field name="ghiChu" type="String" />
+	</model>
+	<model name="com.minimart.portlet.cuahang.model.CaLamViec">
+		<field name="caLamViecId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="cuaHangId" type="long" />
+		<field name="gioVaoLam" type="Date" />
+		<field name="gioRaVe" type="Date" />
+		<field name="gioNghiGiuaCaTu" type="Date" />
+		<field name="gioNghiGiuaCaDen" type="Date" />
+		<field name="tiLeLuong" type="int" />
+		<field name="hoatDong" type="boolean" />
+	</model>
+	<model name="com.minimart.portlet.cuahang.model.CuaHang">
+		<field name="uuid" type="String" />
+		<field name="cuaHangId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="gioMoCua" type="Date" />
+		<field name="gioDongCua" type="Date" />
+		<field name="hoatDong" type="boolean" />
+		<field name="uuTien" type="int" />
+		<field name="diaChi" type="String" />
+		<field name="dienThoai" type="String" />
+		<field name="khoHangId" type="long" />
+	</model>
+	<model name="com.minimart.portlet.cuahang.model.TangCa">
+		<field name="tangCaId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="cuaHangId" type="long" />
+		<field name="caLamViecId" type="long" />
+		<field name="nhanVienId" type="long" />
+		<field name="tangCaTu" type="Date" />
+		<field name="tangCaDen" type="Date" />
+		<field name="hoatDong" type="boolean" />
+	</model>
+	<model name="com.minimart.portlet.danhmucchung.model.Duong">
+		<field name="duongId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="ma" type="String" />
+		<field name="trangThai" type="boolean" />
+	</model>
+	<model name="com.minimart.portlet.danhmucchung.model.PhuongXa">
+		<field name="phuongXaId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="ma" type="String" />
+		<field name="trangThai" type="boolean" />
+	</model>
+	<model name="com.minimart.portlet.danhmucchung.model.QuanHuyen">
+		<field name="quanHuyenId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="ma" type="String" />
+		<field name="trangThai" type="boolean" />
+	</model>
+	<model name="com.minimart.portlet.danhmucchung.model.TinhThanhPho">
+		<field name="tinhThanhPhoId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="ma" type="String" />
+		<field name="trangThai" type="boolean" />
+	</model>
+	<model name="com.minimart.portlet.dathang.model.DatHang">
+		<field name="datHangId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="khachHangId" type="long" />
+		<field name="diaChiId" type="long" />
+		<field name="tienHang" type="int" />
+		<field name="tiLeThue" type="double" />
+		<field name="tiLeGiamGia" type="double" />
+		<field name="tienGiamGia" type="int" />
+		<field name="phiVanChuyen" type="int" />
+		<field name="tongCong" type="int" />
+		<field name="loai" type="int" />
+		<field name="giamTheoTien" type="int" />
+		<field name="trangThai" type="boolean" />
+		<field name="userModifiedId" type="long" />
+		<field name="timeModified" type="Date" />
+		<field name="userCreateId" type="long" />
+		<field name="loaiGia" type="int" />
+		<field name="hoatDong" type="boolean" />
+	</model>
+	<model name="com.minimart.portlet.dathang.model.DatHangChiTiet">
+		<field name="datHangChiTietId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="soLuong" type="int" />
+		<field name="donGia" type="int" />
+		<field name="thanhTien" type="int" />
+		<field name="tiLeGiamGia" type="double" />
+		<field name="ghiChu" type="String" />
+		<field name="trangThai" type="boolean" />
+		<field name="baoHanh" type="String" />
+		<field name="donViTinhId" type="long" />
+		<field name="datHangId" type="long" />
+		<field name="maHangId" type="long" />
+	</model>
+	<model name="com.minimart.portlet.ketoan.model.BangLuong">
+		<field name="banLuongId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="trangThai" type="boolean" />
+		<field name="thang" type="int" />
+		<field name="nam" type="int" />
+		<field name="ngay" type="Date" />
+		<field name="chiTiet" type="String" />
+		<field name="ghiChu" type="String" />
+	</model>
+	<model name="com.minimart.portlet.ketoan.model.ThuChi">
+		<field name="thuChiId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="tenDoiTuong" type="String" />
+		<field name="diaChiId" type="long" />
+		<field name="loai" type="int" />
+		<field name="loaiDoiTuong" type="int" />
+		<field name="thu" type="int" />
+		<field name="chi" type="int" />
+		<field name="nhaCungCapId" type="long" />
+		<field name="khachHangId" type="long" />
+		<field name="nhanVienId" type="long" />
+		<field name="theTraTruocId" type="long" />
+		<field name="taiKhoanNganHangId" type="long" />
+		<field name="datHangId" type="long" />
+		<field name="bangLuongId" type="long" />
+		<field name="lyDoThuChi" type="String" />
+	</model>
+	<model name="com.minimart.portlet.khachhang.model.KhachHang">
+		<field name="khachHangId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="nhomKhachHangId" type="long" />
+		<field name="ma" type="String" />
+		<field name="diaChi" type="String" />
+		<field name="dienThoai" type="String" />
+		<field name="email" type="String" />
+		<field name="facebook" type="String" />
+		<field name="twitter" type="String" />
+		<field name="socialMedia1" type="String" />
+		<field name="socialMedia2" type="String" />
+		<field name="socialMedia3" type="String" />
+		<field name="trangThai" type="int" />
+		<field name="diemTichLuy" type="int" />
+		<field name="maSoThue" type="String" />
+		<field name="hoatDong" type="boolean" />
+		<field name="ngaySinh" type="Date" />
+	</model>
+	<model name="com.minimart.portlet.khachhang.model.NhomKhachHang">
+		<field name="nhomKhachHangId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="hoatDong" type="boolean" />
+		<field name="diemTichLuy" type="int" />
+		<field name="tiLeGiamGia" type="int" />
+		<field name="uuTien" type="int" />
+		<field name="image" type="String" />
+	</model>
+	<model name="com.minimart.portlet.khohang.model.KhoHang">
+		<field name="khoHangId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="trangThai" type="boolean" />
+		<field name="itemType" type="int" />
+		<field name="choPhepNhapKho" type="boolean" />
+		<field name="cuaHangId" type="long" />
+		<field name="autoId" type="long" />
+		<field name="sigmaId" type="long" />
+		<field name="ghiChu" type="String" />
+	</model>
+	<model name="com.minimart.portlet.khuyenmai.model.DotKhuyenMai">
+		<field name="dotKhuyenMaiId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="trangThai" type="boolean" />
+		<field name="userModifieldId" type="long" />
+		<field name="ngayBatDau" type="Date" />
+		<field name="ngayHetHan" type="Date" />
+		<field name="ngungApDung" type="boolean" />
+		<field name="tiLeGiaGia" type="int" />
+		<field name="ghiChu" type="String" />
+	</model>
+	<model name="com.minimart.portlet.khuyenmai.model.DotKhuyenMaiChiTiet">
+		<field name="dotKhuyenMaiChiTietId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="dotKhuyenMaiId" type="long" />
+		<field name="nhomMatHangId" type="long" />
+		<field name="matHangId" type="long" />
+		<field name="matHangTangId" type="long" />
+		<field name="tiLeGiamGia" type="double" />
+		<field name="giaTriDonHang" type="double" />
+		<field name="soLuongMua" type="int" />
+		<field name="soLuongTang" type="int" />
+		<field name="giaBan" type="int" />
+	</model>
+	<model name="com.minimart.portlet.khuyenmai.model.LoaiHinhKhuyenMai">
+		<field name="loaiHinhKhuyenMaiId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="trangThai" type="boolean" />
+		<field name="tileGiamGia" type="int" />
+		<field name="ngayBatDau" type="Date" />
+		<field name="ngayHetHan" type="Date" />
+		<field name="imageid" type="String" />
+		<field name="ghiChu" type="String" />
+	</model>
+	<model name="com.minimart.portlet.nhacungcap.model.NhaCungCap">
+		<field name="nhaCungCapId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="tenNhaCungCap" type="String" />
+		<field name="nhomNhaCungCapId" type="long" />
+		<field name="maNhaCungCap" type="String" />
+		<field name="diaChi" type="String" />
+		<field name="dienThoai" type="String" />
+		<field name="email" type="String" />
+		<field name="website" type="String" />
+		<field name="ghiChu" type="String" />
+		<field name="hoatDong" type="boolean" />
+		<field name="doUuTien" type="int" />
+		<field name="logoURL" type="String" />
+	</model>
+	<model name="com.minimart.portlet.nhacungcap.model.NhomNhaCungCap">
+		<field name="nhomNhaCungCapId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="ghiChu" type="String" />
+		<field name="hoatDong" type="boolean" />
+		<field name="uuTien" type="int" />
+		<field name="image" type="String" />
+	</model>
+	<model name="com.minimart.portlet.nhanvien.model.NhanVien">
+		<field name="uuid" type="String" />
+		<field name="nhanVienId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ten" type="String" />
+		<field name="ho" type="String" />
+		<field name="trangThai" type="boolean" />
+		<field name="nghiThu7" type="boolean" />
+		<field name="nghiChuNhat" type="boolean" />
+		<field name="cachTinhLuong" type="int" />
+		<field name="luongCa" type="int" />
+		<field name="luongThang" type="int" />
+		<field name="image" type="String" />
+		<field name="diaChiId" type="long" />
+	</model>
+	<model name="com.minimart.portlet.thethanhtoan.model.TheTraTruoc">
+		<field name="theTraTruocId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="tenThe" type="String" />
+		<field name="nhomTheTraTruocId" type="long" />
+		<field name="khoa" type="boolean" />
+		<field name="ngayHetHan" type="Date" />
+		<field name="trangThai" type="String" />
+		<field name="userModifiledId" type="long" />
+	</model>
 </model-hints>

@@ -10,4 +10,76 @@
 	<bean id="com.minimart.portlet.mathang.service.NhomMatHangLocalService" class="com.minimart.portlet.mathang.service.impl.NhomMatHangLocalServiceImpl" />
 	<bean id="com.minimart.portlet.mathang.service.NhomMatHangService" class="com.minimart.portlet.mathang.service.impl.NhomMatHangServiceImpl" />
 	<bean id="com.minimart.portlet.mathang.service.persistence.NhomMatHangPersistence" class="com.minimart.portlet.mathang.service.persistence.NhomMatHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.banhang.service.DonHangLocalService" class="com.minimart.portlet.banhang.service.impl.DonHangLocalServiceImpl" />
+	<bean id="com.minimart.portlet.banhang.service.DonHangService" class="com.minimart.portlet.banhang.service.impl.DonHangServiceImpl" />
+	<bean id="com.minimart.portlet.banhang.service.persistence.DonHangPersistence" class="com.minimart.portlet.banhang.service.persistence.DonHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.banhang.service.DonHangChiTietLocalService" class="com.minimart.portlet.banhang.service.impl.DonHangChiTietLocalServiceImpl" />
+	<bean id="com.minimart.portlet.banhang.service.DonHangChiTietService" class="com.minimart.portlet.banhang.service.impl.DonHangChiTietServiceImpl" />
+	<bean id="com.minimart.portlet.banhang.service.persistence.DonHangChiTietPersistence" class="com.minimart.portlet.banhang.service.persistence.DonHangChiTietPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.banhang.service.TrangThaiDonHangLocalService" class="com.minimart.portlet.banhang.service.impl.TrangThaiDonHangLocalServiceImpl" />
+	<bean id="com.minimart.portlet.banhang.service.TrangThaiDonHangService" class="com.minimart.portlet.banhang.service.impl.TrangThaiDonHangServiceImpl" />
+	<bean id="com.minimart.portlet.banhang.service.persistence.TrangThaiDonHangPersistence" class="com.minimart.portlet.banhang.service.persistence.TrangThaiDonHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.cuahang.service.CaLamViecLocalService" class="com.minimart.portlet.cuahang.service.impl.CaLamViecLocalServiceImpl" />
+	<bean id="com.minimart.portlet.cuahang.service.CaLamViecService" class="com.minimart.portlet.cuahang.service.impl.CaLamViecServiceImpl" />
+	<bean id="com.minimart.portlet.cuahang.service.persistence.CaLamViecPersistence" class="com.minimart.portlet.cuahang.service.persistence.CaLamViecPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.cuahang.service.CuaHangLocalService" class="com.minimart.portlet.cuahang.service.impl.CuaHangLocalServiceImpl" />
+	<bean id="com.minimart.portlet.cuahang.service.CuaHangService" class="com.minimart.portlet.cuahang.service.impl.CuaHangServiceImpl" />
+	<bean id="com.minimart.portlet.cuahang.service.persistence.CuaHangPersistence" class="com.minimart.portlet.cuahang.service.persistence.CuaHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.cuahang.service.TangCaLocalService" class="com.minimart.portlet.cuahang.service.impl.TangCaLocalServiceImpl" />
+	<bean id="com.minimart.portlet.cuahang.service.TangCaService" class="com.minimart.portlet.cuahang.service.impl.TangCaServiceImpl" />
+	<bean id="com.minimart.portlet.cuahang.service.persistence.TangCaPersistence" class="com.minimart.portlet.cuahang.service.persistence.TangCaPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.danhmucchung.service.DuongLocalService" class="com.minimart.portlet.danhmucchung.service.impl.DuongLocalServiceImpl" />
+	<bean id="com.minimart.portlet.danhmucchung.service.DuongService" class="com.minimart.portlet.danhmucchung.service.impl.DuongServiceImpl" />
+	<bean id="com.minimart.portlet.danhmucchung.service.persistence.DuongPersistence" class="com.minimart.portlet.danhmucchung.service.persistence.DuongPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.danhmucchung.service.PhuongXaLocalService" class="com.minimart.portlet.danhmucchung.service.impl.PhuongXaLocalServiceImpl" />
+	<bean id="com.minimart.portlet.danhmucchung.service.PhuongXaService" class="com.minimart.portlet.danhmucchung.service.impl.PhuongXaServiceImpl" />
+	<bean id="com.minimart.portlet.danhmucchung.service.persistence.PhuongXaPersistence" class="com.minimart.portlet.danhmucchung.service.persistence.PhuongXaPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.danhmucchung.service.QuanHuyenLocalService" class="com.minimart.portlet.danhmucchung.service.impl.QuanHuyenLocalServiceImpl" />
+	<bean id="com.minimart.portlet.danhmucchung.service.QuanHuyenService" class="com.minimart.portlet.danhmucchung.service.impl.QuanHuyenServiceImpl" />
+	<bean id="com.minimart.portlet.danhmucchung.service.persistence.QuanHuyenPersistence" class="com.minimart.portlet.danhmucchung.service.persistence.QuanHuyenPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.danhmucchung.service.TinhThanhPhoLocalService" class="com.minimart.portlet.danhmucchung.service.impl.TinhThanhPhoLocalServiceImpl" />
+	<bean id="com.minimart.portlet.danhmucchung.service.TinhThanhPhoService" class="com.minimart.portlet.danhmucchung.service.impl.TinhThanhPhoServiceImpl" />
+	<bean id="com.minimart.portlet.danhmucchung.service.persistence.TinhThanhPhoPersistence" class="com.minimart.portlet.danhmucchung.service.persistence.TinhThanhPhoPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.dathang.service.DatHangLocalService" class="com.minimart.portlet.dathang.service.impl.DatHangLocalServiceImpl" />
+	<bean id="com.minimart.portlet.dathang.service.DatHangService" class="com.minimart.portlet.dathang.service.impl.DatHangServiceImpl" />
+	<bean id="com.minimart.portlet.dathang.service.persistence.DatHangPersistence" class="com.minimart.portlet.dathang.service.persistence.DatHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.dathang.service.DatHangChiTietLocalService" class="com.minimart.portlet.dathang.service.impl.DatHangChiTietLocalServiceImpl" />
+	<bean id="com.minimart.portlet.dathang.service.DatHangChiTietService" class="com.minimart.portlet.dathang.service.impl.DatHangChiTietServiceImpl" />
+	<bean id="com.minimart.portlet.dathang.service.persistence.DatHangChiTietPersistence" class="com.minimart.portlet.dathang.service.persistence.DatHangChiTietPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.ketoan.service.BangLuongLocalService" class="com.minimart.portlet.ketoan.service.impl.BangLuongLocalServiceImpl" />
+	<bean id="com.minimart.portlet.ketoan.service.BangLuongService" class="com.minimart.portlet.ketoan.service.impl.BangLuongServiceImpl" />
+	<bean id="com.minimart.portlet.ketoan.service.persistence.BangLuongPersistence" class="com.minimart.portlet.ketoan.service.persistence.BangLuongPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.ketoan.service.ThuChiLocalService" class="com.minimart.portlet.ketoan.service.impl.ThuChiLocalServiceImpl" />
+	<bean id="com.minimart.portlet.ketoan.service.ThuChiService" class="com.minimart.portlet.ketoan.service.impl.ThuChiServiceImpl" />
+	<bean id="com.minimart.portlet.ketoan.service.persistence.ThuChiPersistence" class="com.minimart.portlet.ketoan.service.persistence.ThuChiPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.khachhang.service.KhachHangLocalService" class="com.minimart.portlet.khachhang.service.impl.KhachHangLocalServiceImpl" />
+	<bean id="com.minimart.portlet.khachhang.service.KhachHangService" class="com.minimart.portlet.khachhang.service.impl.KhachHangServiceImpl" />
+	<bean id="com.minimart.portlet.khachhang.service.persistence.KhachHangPersistence" class="com.minimart.portlet.khachhang.service.persistence.KhachHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.khachhang.service.NhomKhachHangLocalService" class="com.minimart.portlet.khachhang.service.impl.NhomKhachHangLocalServiceImpl" />
+	<bean id="com.minimart.portlet.khachhang.service.NhomKhachHangService" class="com.minimart.portlet.khachhang.service.impl.NhomKhachHangServiceImpl" />
+	<bean id="com.minimart.portlet.khachhang.service.persistence.NhomKhachHangPersistence" class="com.minimart.portlet.khachhang.service.persistence.NhomKhachHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.khohang.service.KhoHangLocalService" class="com.minimart.portlet.khohang.service.impl.KhoHangLocalServiceImpl" />
+	<bean id="com.minimart.portlet.khohang.service.KhoHangService" class="com.minimart.portlet.khohang.service.impl.KhoHangServiceImpl" />
+	<bean id="com.minimart.portlet.khohang.service.persistence.KhoHangPersistence" class="com.minimart.portlet.khohang.service.persistence.KhoHangPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.khuyenmai.service.DotKhuyenMaiLocalService" class="com.minimart.portlet.khuyenmai.service.impl.DotKhuyenMaiLocalServiceImpl" />
+	<bean id="com.minimart.portlet.khuyenmai.service.DotKhuyenMaiService" class="com.minimart.portlet.khuyenmai.service.impl.DotKhuyenMaiServiceImpl" />
+	<bean id="com.minimart.portlet.khuyenmai.service.persistence.DotKhuyenMaiPersistence" class="com.minimart.portlet.khuyenmai.service.persistence.DotKhuyenMaiPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.khuyenmai.service.DotKhuyenMaiChiTietLocalService" class="com.minimart.portlet.khuyenmai.service.impl.DotKhuyenMaiChiTietLocalServiceImpl" />
+	<bean id="com.minimart.portlet.khuyenmai.service.DotKhuyenMaiChiTietService" class="com.minimart.portlet.khuyenmai.service.impl.DotKhuyenMaiChiTietServiceImpl" />
+	<bean id="com.minimart.portlet.khuyenmai.service.persistence.DotKhuyenMaiChiTietPersistence" class="com.minimart.portlet.khuyenmai.service.persistence.DotKhuyenMaiChiTietPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.khuyenmai.service.LoaiHinhKhuyenMaiLocalService" class="com.minimart.portlet.khuyenmai.service.impl.LoaiHinhKhuyenMaiLocalServiceImpl" />
+	<bean id="com.minimart.portlet.khuyenmai.service.LoaiHinhKhuyenMaiService" class="com.minimart.portlet.khuyenmai.service.impl.LoaiHinhKhuyenMaiServiceImpl" />
+	<bean id="com.minimart.portlet.khuyenmai.service.persistence.LoaiHinhKhuyenMaiPersistence" class="com.minimart.portlet.khuyenmai.service.persistence.LoaiHinhKhuyenMaiPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.nhacungcap.service.NhaCungCapLocalService" class="com.minimart.portlet.nhacungcap.service.impl.NhaCungCapLocalServiceImpl" />
+	<bean id="com.minimart.portlet.nhacungcap.service.NhaCungCapService" class="com.minimart.portlet.nhacungcap.service.impl.NhaCungCapServiceImpl" />
+	<bean id="com.minimart.portlet.nhacungcap.service.persistence.NhaCungCapPersistence" class="com.minimart.portlet.nhacungcap.service.persistence.NhaCungCapPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.nhacungcap.service.NhomNhaCungCapLocalService" class="com.minimart.portlet.nhacungcap.service.impl.NhomNhaCungCapLocalServiceImpl" />
+	<bean id="com.minimart.portlet.nhacungcap.service.NhomNhaCungCapService" class="com.minimart.portlet.nhacungcap.service.impl.NhomNhaCungCapServiceImpl" />
+	<bean id="com.minimart.portlet.nhacungcap.service.persistence.NhomNhaCungCapPersistence" class="com.minimart.portlet.nhacungcap.service.persistence.NhomNhaCungCapPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.nhanvien.service.NhanVienLocalService" class="com.minimart.portlet.nhanvien.service.impl.NhanVienLocalServiceImpl" />
+	<bean id="com.minimart.portlet.nhanvien.service.NhanVienService" class="com.minimart.portlet.nhanvien.service.impl.NhanVienServiceImpl" />
+	<bean id="com.minimart.portlet.nhanvien.service.persistence.NhanVienPersistence" class="com.minimart.portlet.nhanvien.service.persistence.NhanVienPersistenceImpl" parent="basePersistence" />
+	<bean id="com.minimart.portlet.thethanhtoan.service.TheTraTruocLocalService" class="com.minimart.portlet.thethanhtoan.service.impl.TheTraTruocLocalServiceImpl" />
+	<bean id="com.minimart.portlet.thethanhtoan.service.TheTraTruocService" class="com.minimart.portlet.thethanhtoan.service.impl.TheTraTruocServiceImpl" />
+	<bean id="com.minimart.portlet.thethanhtoan.service.persistence.TheTraTruocPersistence" class="com.minimart.portlet.thethanhtoan.service.persistence.TheTraTruocPersistenceImpl" parent="basePersistence" />
 </beans>

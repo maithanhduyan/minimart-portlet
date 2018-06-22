@@ -3,5 +3,6 @@
 
 <display>
 	<category name="Mini Mart">
+		<portlet id="mathang"></portlet>
 	</category>
 </display>

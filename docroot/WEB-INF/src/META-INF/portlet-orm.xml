@@ -97,6 +97,682 @@
 			<transient name="userUuid" />
 		</attributes>
 	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.banhang.model.impl.DonHangModelImpl">
+		<attributes>
+			<id name="donHangId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="cuaHangId" />
+			<basic name="khachHangId" />
+			<basic name="hoatDong" />
+			<basic name="tongCong" />
+			<basic name="daThanhToan" />
+			<basic name="phiVanChuyen" />
+			<basic name="trangThaiDonHangId" />
+			<basic name="ngayThanhToan">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="khachDua" />
+			<basic name="traLai" />
+			<basic name="thueVAT" />
+			<basic name="diemTichLuy" />
+			<basic name="thanhToanTienMat" />
+			<basic name="thanhToanThe" />
+			<basic name="thanhToanChuyenKhoan" />
+			<basic name="phieuGiamGiaId" />
+			<basic name="truTichLuy" />
+			<basic name="inHoaDonLan" />
+			<basic name="maDonHang" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.banhang.model.impl.DonHangChiTietModelImpl">
+		<attributes>
+			<id name="donHangChiTietId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="donHangId" />
+			<basic name="matHangId" />
+			<basic name="soLuong" />
+			<basic name="donViTinhId" />
+			<basic name="thanhTien" />
+			<basic name="tiLeGiamGia" />
+			<basic name="kichThuoc" />
+			<basic name="hanSuDung">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="hoatDong" />
+			<basic name="huy" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.banhang.model.impl.TrangThaiDonHangModelImpl">
+		<attributes>
+			<id name="trangThaiDonHangId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="hoatDong" />
+			<basic name="ghiChu" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.cuahang.model.impl.CaLamViecModelImpl">
+		<attributes>
+			<id name="caLamViecId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="cuaHangId" />
+			<basic name="gioVaoLam">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="gioRaVe">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="gioNghiGiuaCaTu">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="gioNghiGiuaCaDen">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="tiLeLuong" />
+			<basic name="hoatDong" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.cuahang.model.impl.CuaHangModelImpl">
+		<attributes>
+			<id name="cuaHangId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="gioMoCua">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="gioDongCua">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="hoatDong" />
+			<basic name="uuTien" />
+			<basic name="diaChi" />
+			<basic name="dienThoai" />
+			<basic name="khoHangId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.cuahang.model.impl.TangCaModelImpl">
+		<attributes>
+			<id name="tangCaId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="cuaHangId" />
+			<basic name="caLamViecId" />
+			<basic name="nhanVienId" />
+			<basic name="tangCaTu">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="tangCaDen">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="hoatDong" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.danhmucchung.model.impl.DuongModelImpl">
+		<attributes>
+			<id name="duongId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="ma" />
+			<basic name="trangThai" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.danhmucchung.model.impl.PhuongXaModelImpl">
+		<attributes>
+			<id name="phuongXaId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="ma" />
+			<basic name="trangThai" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.danhmucchung.model.impl.QuanHuyenModelImpl">
+		<attributes>
+			<id name="quanHuyenId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="ma" />
+			<basic name="trangThai" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.danhmucchung.model.impl.TinhThanhPhoModelImpl">
+		<attributes>
+			<id name="tinhThanhPhoId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="ma" />
+			<basic name="trangThai" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.dathang.model.impl.DatHangModelImpl">
+		<attributes>
+			<id name="datHangId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="khachHangId" />
+			<basic name="diaChiId" />
+			<basic name="tienHang" />
+			<basic name="tiLeThue" />
+			<basic name="tiLeGiamGia" />
+			<basic name="tienGiamGia" />
+			<basic name="phiVanChuyen" />
+			<basic name="tongCong" />
+			<basic name="loai" />
+			<basic name="giamTheoTien" />
+			<basic name="trangThai" />
+			<basic name="userModifiedId" />
+			<basic name="timeModified">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="userCreateId" />
+			<basic name="loaiGia" />
+			<basic name="hoatDong" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.dathang.model.impl.DatHangChiTietModelImpl">
+		<attributes>
+			<id name="datHangChiTietId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="soLuong" />
+			<basic name="donGia" />
+			<basic name="thanhTien" />
+			<basic name="tiLeGiamGia" />
+			<basic name="ghiChu" />
+			<basic name="trangThai" />
+			<basic name="baoHanh" />
+			<basic name="donViTinhId" />
+			<basic name="datHangId" />
+			<basic name="maHangId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.ketoan.model.impl.BangLuongModelImpl">
+		<attributes>
+			<id name="banLuongId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="trangThai" />
+			<basic name="thang" />
+			<basic name="nam" />
+			<basic name="ngay">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="chiTiet" />
+			<basic name="ghiChu" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.ketoan.model.impl.ThuChiModelImpl">
+		<attributes>
+			<id name="thuChiId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="tenDoiTuong" />
+			<basic name="diaChiId" />
+			<basic name="loai" />
+			<basic name="loaiDoiTuong" />
+			<basic name="thu" />
+			<basic name="chi" />
+			<basic name="nhaCungCapId" />
+			<basic name="khachHangId" />
+			<basic name="nhanVienId" />
+			<basic name="theTraTruocId" />
+			<basic name="taiKhoanNganHangId" />
+			<basic name="datHangId" />
+			<basic name="bangLuongId" />
+			<basic name="lyDoThuChi" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.khachhang.model.impl.KhachHangModelImpl">
+		<attributes>
+			<id name="khachHangId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="nhomKhachHangId" />
+			<basic name="ma" />
+			<basic name="diaChi" />
+			<basic name="dienThoai" />
+			<basic name="email" />
+			<basic name="facebook" />
+			<basic name="twitter" />
+			<basic name="socialMedia1" />
+			<basic name="socialMedia2" />
+			<basic name="socialMedia3" />
+			<basic name="trangThai" />
+			<basic name="diemTichLuy" />
+			<basic name="maSoThue" />
+			<basic name="hoatDong" />
+			<basic name="ngaySinh">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.khachhang.model.impl.NhomKhachHangModelImpl">
+		<attributes>
+			<id name="nhomKhachHangId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="hoatDong" />
+			<basic name="diemTichLuy" />
+			<basic name="tiLeGiamGia" />
+			<basic name="uuTien" />
+			<basic name="image" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.khohang.model.impl.KhoHangModelImpl">
+		<attributes>
+			<id name="khoHangId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="trangThai" />
+			<basic name="itemType" />
+			<basic name="choPhepNhapKho" />
+			<basic name="cuaHangId" />
+			<basic name="autoId" />
+			<basic name="sigmaId" />
+			<basic name="ghiChu" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.khuyenmai.model.impl.DotKhuyenMaiModelImpl">
+		<attributes>
+			<id name="dotKhuyenMaiId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="trangThai" />
+			<basic name="userModifieldId" />
+			<basic name="ngayBatDau">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ngayHetHan">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ngungApDung" />
+			<basic name="tiLeGiaGia" />
+			<basic name="ghiChu" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.khuyenmai.model.impl.DotKhuyenMaiChiTietModelImpl">
+		<attributes>
+			<id name="dotKhuyenMaiChiTietId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="dotKhuyenMaiId" />
+			<basic name="nhomMatHangId" />
+			<basic name="matHangId" />
+			<basic name="matHangTangId" />
+			<basic name="tiLeGiamGia" />
+			<basic name="giaTriDonHang" />
+			<basic name="soLuongMua" />
+			<basic name="soLuongTang" />
+			<basic name="giaBan" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.khuyenmai.model.impl.LoaiHinhKhuyenMaiModelImpl">
+		<attributes>
+			<id name="loaiHinhKhuyenMaiId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="trangThai" />
+			<basic name="tileGiamGia" />
+			<basic name="ngayBatDau">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ngayHetHan">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="imageid" />
+			<basic name="ghiChu" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.nhacungcap.model.impl.NhaCungCapModelImpl">
+		<attributes>
+			<id name="nhaCungCapId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="tenNhaCungCap" />
+			<basic name="nhomNhaCungCapId" />
+			<basic name="maNhaCungCap" />
+			<basic name="diaChi" />
+			<basic name="dienThoai" />
+			<basic name="email" />
+			<basic name="website" />
+			<basic name="ghiChu" />
+			<basic name="hoatDong" />
+			<basic name="doUuTien" />
+			<basic name="logoURL" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.nhacungcap.model.impl.NhomNhaCungCapModelImpl">
+		<attributes>
+			<id name="nhomNhaCungCapId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="ghiChu" />
+			<basic name="hoatDong" />
+			<basic name="uuTien" />
+			<basic name="image" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.nhanvien.model.impl.NhanVienModelImpl">
+		<attributes>
+			<id name="nhanVienId" />
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="ten" />
+			<basic name="ho" />
+			<basic name="trangThai" />
+			<basic name="nghiThu7" />
+			<basic name="nghiChuNhat" />
+			<basic name="cachTinhLuong" />
+			<basic name="luongCa" />
+			<basic name="luongThang" />
+			<basic name="image" />
+			<basic name="diaChiId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.minimart.portlet.thethanhtoan.model.impl.TheTraTruocModelImpl">
+		<attributes>
+			<id name="theTraTruocId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="tenThe" />
+			<basic name="nhomTheTraTruocId" />
+			<basic name="khoa" />
+			<basic name="ngayHetHan">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="trangThai" />
+			<basic name="userModifiledId" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
 	<entity class="com.minimart.portlet.mathang.model.impl.DonViTinhImpl" name="DonViTinh">
 		<table name="minimart_donvitinh" />
 		<attributes />
@@ -107,6 +783,102 @@
 	</entity>
 	<entity class="com.minimart.portlet.mathang.model.impl.NhomMatHangImpl" name="NhomMatHang">
 		<table name="minimart_nhommathang" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.banhang.model.impl.DonHangImpl" name="DonHang">
+		<table name="minimart_donhang" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.banhang.model.impl.DonHangChiTietImpl" name="DonHangChiTiet">
+		<table name="minimart_donhangchitiet" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.banhang.model.impl.TrangThaiDonHangImpl" name="TrangThaiDonHang">
+		<table name="minimart_trangthaidonhang" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.cuahang.model.impl.CaLamViecImpl" name="CaLamViec">
+		<table name="minimart_calamviec" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.cuahang.model.impl.CuaHangImpl" name="CuaHang">
+		<table name="minimart_cuahang" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.cuahang.model.impl.TangCaImpl" name="TangCa">
+		<table name="minimart_tangca" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.danhmucchung.model.impl.DuongImpl" name="Duong">
+		<table name="minimart_Duong" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.danhmucchung.model.impl.PhuongXaImpl" name="PhuongXa">
+		<table name="minimart_phuongxa" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.danhmucchung.model.impl.QuanHuyenImpl" name="QuanHuyen">
+		<table name="minimart_quanhuyen" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.danhmucchung.model.impl.TinhThanhPhoImpl" name="TinhThanhPho">
+		<table name="minimart_tinhthanhpho" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.dathang.model.impl.DatHangImpl" name="DatHang">
+		<table name="minimart_dathang" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.dathang.model.impl.DatHangChiTietImpl" name="DatHangChiTiet">
+		<table name="minimart_dathangchitiet" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.ketoan.model.impl.BangLuongImpl" name="BangLuong">
+		<table name="minimart_bangluong" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.ketoan.model.impl.ThuChiImpl" name="ThuChi">
+		<table name="minimart_thuchi" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.khachhang.model.impl.KhachHangImpl" name="KhachHang">
+		<table name="minimart_khachhang" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.khachhang.model.impl.NhomKhachHangImpl" name="NhomKhachHang">
+		<table name="minimart_nhomkhachhang" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.khohang.model.impl.KhoHangImpl" name="KhoHang">
+		<table name="minimart_khohang" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.khuyenmai.model.impl.DotKhuyenMaiImpl" name="DotKhuyenMai">
+		<table name="minimart_dotkhuyenmai" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.khuyenmai.model.impl.DotKhuyenMaiChiTietImpl" name="DotKhuyenMaiChiTiet">
+		<table name="minimart_dotkhuyenmaichitiet" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.khuyenmai.model.impl.LoaiHinhKhuyenMaiImpl" name="LoaiHinhKhuyenMai">
+		<table name="minimart_loaihinhkhuyenmai" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.nhacungcap.model.impl.NhaCungCapImpl" name="NhaCungCap">
+		<table name="minimart_nhacungcap" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.nhacungcap.model.impl.NhomNhaCungCapImpl" name="NhomNhaCungCap">
+		<table name="minimart_nhomnhacungcap" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.nhanvien.model.impl.NhanVienImpl" name="NhanVien">
+		<table name="minimart_nhanvien" />
+		<attributes />
+	</entity>
+	<entity class="com.minimart.portlet.thethanhtoan.model.impl.TheTraTruocImpl" name="TheTraTruoc">
+		<table name="minimart_thetratruoc" />
 		<attributes />
 	</entity>
 </entity-mappings>
